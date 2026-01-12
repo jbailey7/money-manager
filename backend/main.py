@@ -20,7 +20,7 @@ def months(year):
         for spending in spendings:
             if spending.necessary == "Yes":
                 necessary += spending.amount
-        month["necessary"] = round(necessary / month["spent"] * 100, 2)
+        month["necessary"] = round(necessary / month["spent"] * 100, 2) if month["spent"] > 0 else 0.0
         
     return jsonify({"months": json_months})
 
@@ -53,7 +53,7 @@ def years_total():
         "earned": round(earned, 2),
         "invested": round(invested, 2),
         "net": round(net, 2),
-        "necessary": round(necessary / spent * 100 , 2)
+        "necessary": round(necessary / spent * 100 , 2) if spent > 0 else 0.0
     }})
     
 @app.route("/averages_headers", methods=["GET"])
@@ -441,7 +441,7 @@ def category_averages():
             else:
                 res[index]["data"].append({"value": 0.0, "id": generate_random_id()})
 
-        res[index]["data"].append({"value": round(cat_total / total_months, 2), "id": generate_random_id()})                    
+        res[index]["data"].append({"value": round(cat_total / total_months, 2), "id": generate_random_id()}) if total_months > 0 else 0.0                    
                 
         
     return jsonify({"averages": res}), 200
