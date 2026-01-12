@@ -323,8 +323,6 @@ def category_by_month(year):
         curr_category = {}
         curr_category["category"] = category
         curr_category["data"] = []
-        if current_month == 1:
-            return jsonify({"message": res})
         for i in range(1, current_month):
             curr_month = str(i)
             month_spendings = 0.0
@@ -354,6 +352,10 @@ def month_by_category(year):
     else:
         current_month = len(MONTHS)
     if current_month == 1:
+        current_month_obj = {}
+        current_month_obj["month"] = MONTHS[current_month]
+        current_month_obj["data"] = []
+        res.append(current_month_obj)
         return jsonify({"data": res})
     for i in range(1, current_month):
         current_month_obj = {}
