@@ -14,18 +14,16 @@ The Home page is the application's landing page. It simply outlines the 10 spend
 ### Add
 The Add page allows users to record a new transaction in the database. It contains six input fields:
 
-**Date** (required): The date the transaction occurred
-**Amount** (required): The transaction amount
-**What** (required): A brief description of the transaction
-**Category**: One of ten predefined spending categories, selected from a dropdown
-**Necessary**: A yes/no dropdown indicating whether the transaction was necessary
-**Year** (required): The transaction year, which defaults to the current year
+**Date** (required): The date the transaction occurred<br/>
+**Amount** (required): The transaction amount<br/>
+**What** (required): A brief description of the transaction<br/>
+**Category**: One of ten predefined spending categories, selected from a dropdown<br/>
+**Necessary**: A yes/no dropdown indicating whether the transaction was necessary<br/>
+**Year** (required): The transaction year, which defaults to the current year<br/>
 
 ![Add Page](<images/Add.png>)
 
-A single form is used to handle both income and spending transactions. The transaction type is inferred from the fields provided: income entries require only the four core fields, while spending entries include all six.
-
-The Category and Necessary fields are specific to spending—income does not belong to a category and cannot be unnecessary. Submitting a form with Date, Amount, What, and Year creates an income transaction. Submitting all six fields creates a spending transaction. Any other combination of fields is considered invalid and results in an error.
+A single form supports both income and spending transactions, with the transaction type inferred from the fields provided. Submissions containing only the four core fields (Date, Amount, What, and Year) are treated as income, while submissions that also include Category and Necessary are treated as spending. These two fields apply only to spending - income does not belong to a category and cannot be unnecessary. Any other combination of fields is considered invalid and results in an error.
 
 After submission, a popup notification informs the user whether the transaction was created successfully.
 
@@ -55,7 +53,7 @@ The Necessary filter offers three options — All, Yes, or No — while the Cate
 
 The Monthly Totals page provides a month-by-month financial summary for a selected year. The year can be chosen from a dropdown at the top, which includes every year with recorded transactions.
 
-For each month, the table displays the total Spent, Earned, and Invested, along with the Net result for the month. The net value is color-coded—green for profitable months and red for unprofitable ones. The table also includes a Necessary % column, indicating what portion of total monthly spending was classified as necessary.
+For each month, the table displays the total Spent, Earned, and Invested, along with the Net result for the month. The net value is color-coded - green for profitable months and red for unprofitable ones. The table also includes a Necessary % column, indicating what portion of total monthly spending was classified as necessary.
 
 A Notes column allows users to record contextual information for each month, such as large purchases or unexpected income. At the bottom of the table, yearly totals are shown for each column to provide a high-level annual summary.
 
@@ -73,7 +71,7 @@ The Averages page calculates average spending by category for a selected year as
 
 To ensure accuracy and comparability, all averages are calculated using only complete months of data. Spending from the current month is excluded, and if the current month is January, the current year is omitted entirely since it contains no full months.
 
-Overall category averages are computed by dividing total spending in that category by the total number of complete months observed across all years. This complete-month requirement prevents partial data from distorting results—for example, avoiding the appearance of reduced average spending simply because a month has just begun.
+Overall category averages are computed by dividing total spending in that category by the total number of complete months observed across all years. This complete-month requirement prevents partial data from distorting results - for example, avoiding the appearance of reduced average spending simply because a month has just begun.
 
 ![Averages Page](<images/CategoryAverages.png>)
 
