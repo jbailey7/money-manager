@@ -12,13 +12,13 @@ function AveragesList() {
   }, []);
 
   const fetchHeaders = async () => {
-    const response = await fetch("http://127.0.0.1:5000/averages_headers");
+    const response = await fetch("/api/averages_headers");
     const data = await response.json();
     setHeaders(data.headers);
   };
 
   const fetchAverages = async () => {
-    const response = await fetch("http://127.0.0.1:5000/category_averages");
+    const response = await fetch("/api/category_averages");
     const data = await response.json();
     setAverages(data.averages);
   };

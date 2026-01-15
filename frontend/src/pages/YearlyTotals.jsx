@@ -13,7 +13,7 @@ function YearlyTotals() {
   }, []);
 
   const fetchYearsTotal = async () => {
-    const response = await fetch("http://127.0.0.1:5000/years_total");
+    const response = await fetch("/api/years_total");
     const data = await response.json();
     setYearsTotal(data.years_total);
   };

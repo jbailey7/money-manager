@@ -33,7 +33,7 @@ const AddForm = ({ existingTransaction = {}, updateCallback }) => {
     };
 
     const url =
-      "http://127.0.0.1:5000/" +
+      "/api/" +
       (updating
         ? `update_transaction/${existingTransaction.id}`
         : "add_transaction");

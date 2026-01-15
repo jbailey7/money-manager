@@ -8,7 +8,7 @@ const AdminForm = () => {
         method: "DELETE",
       };
       const response = await fetch(
-        "http://127.0.0.1:5000/delete_months",
+        "/api/delete_months",
         options
       );
       if (response.status == 200) {
@@ -25,7 +25,7 @@ const AdminForm = () => {
         method: "DELETE",
       };
       const response = await fetch(
-        "http://127.0.0.1:5000/delete_years",
+        "/api/delete_years",
         options
       );
       if (response.status == 200) {
@@ -37,7 +37,7 @@ const AdminForm = () => {
       toast.error("error deleting years");
     }
 
-    const response = await fetch("http://127.0.0.1:5000/recreate_totals");
+    const response = await fetch("/api/recreate_totals");
     if (response.status == 200) {
       toast.success("Successfully recreated month and year objects");
     } else {
