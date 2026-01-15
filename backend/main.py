@@ -62,6 +62,11 @@ def averages_headers():
     res = sorted([str(year.year) for year in years])
     res.insert(0, "Category")
     res.append("Overall")
+    
+    now = datetime.now()
+    if now.month == 1:
+        res.remove(str(now.year))
+    
     return jsonify({"headers": res})
         
 @app.route("/update_transaction/<int:transaction_id>", methods=["PATCH"])
@@ -443,7 +448,7 @@ def category_averages():
             else:
                 res[index]["data"].append({"value": 0.0, "id": generate_random_id()})
 
-        res[index]["data"].append({"value": round(cat_total / total_months, 2), "id": generate_random_id()}) if total_months > 0 else 0.0                    
+        res[index]["data"].append({"value": round(cat_total / total_months, 2), "id": generate_random_id()})                    
                 
         
     return jsonify({"averages": res}), 200

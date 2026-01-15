@@ -5,15 +5,15 @@ function Home() {
       <br />
       <p>
         <span style={{ fontWeight: "bold" }}>Groceries</span>: groceries,
-        protein powder, supplements, caffeine
+        supplements, caffeine
       </p>
       <p>
         <span style={{ fontWeight: "bold" }}>Apartment</span>: rent, internet,
         utilities, kitchen supplies, streaming services
       </p>
       <p>
-        <span style={{ fontWeight: "bold" }}>Investment</span>: stocks, bonds,
-        funds, retirement (does not include 401k)
+        <span style={{ fontWeight: "bold" }}>Investment</span>: any investment 
+        besides 401k
       </p>
       <p>
         <span style={{ fontWeight: "bold" }}>Food Delivery</span>: any food
@@ -24,9 +24,8 @@ function Home() {
         I do not pay a delivery fee (not including eating out at a restaurant)
       </p>
       <p>
-        <span style={{ fontWeight: "bold" }}>Going Out</span>: bars, tickets,
-        liquor stores, eating out at restaurants, dates, tips, cover, gambling
-        losses
+        <span style={{ fontWeight: "bold" }}>Going Out</span>: eating out at restaurants, 
+        bars, tickets
       </p>
       <p>
         <span style={{ fontWeight: "bold" }}>Transportation</span>: Uber, Lyft,
@@ -38,7 +37,7 @@ function Home() {
       </p>
       <p>
         <span style={{ fontWeight: "bold" }}>Aesthetic</span>: clothes,
-        decorations, haircuts, toiletries
+        decorations, haircuts, toiletries, etc
       </p>
       <p>
         <span style={{ fontWeight: "bold" }}>Other</span>: anything else
