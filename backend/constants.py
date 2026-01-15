@@ -1,0 +1,6 @@
+VALID_YEARS = [2023, 2024, 2025, 2026, 2027, 2028]
+MONTHS = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+CATEGORIES = ["Groceries", "Apartment", "Investment", "Food Delivery", "Food Pickup", "Going Out", "Transportation", "Travel", "Aesthetic", "Other"]
+COLOR_BY_MONTH = {"January": "Aqua", "February": "Brown", "March": "CadetBlue", "April": "Chocolate", "May": "CornflowerBlue", "June": "Chartreuse", "July": "DarkGreen", "August": "DeepPink", "September": "DarkMagenta", "October": "Yellow", "November": "Red", "December": "Indigo"}
+COLOR_BY_CATEGORY = {"Groceries": "Aqua", "Apartment": "Brown", "Investment": "CadetBlue", "Food Delivery": "Chocolate", "Food Pickup": "CornflowerBlue", "Going Out": "Chartreuse", "Transportation": "DarkGreen", "Travel": "DeepPink", "Aesthetic": "DarkMagenta", "Other": "Yellow"}
+COLOR_BY_YEAR = {2023: "Aqua", 2024: "Brown", 2025: "CadetBlue", 2026: "Chocolate", 2027: "CornflowerBlue", 2028: "Chartreuse", 2029: "DarkGreen", 2030: "DeepPink", 2031: "DarkMagenta", 2032: "Yellow"}
