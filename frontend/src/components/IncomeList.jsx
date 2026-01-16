@@ -11,7 +11,7 @@ const IncomeList = ({ incomes, updateIncome, updateCallback }) => {
         method: "DELETE",
       };
       const response = await fetch(
-        `http://127.0.0.1:5000/delete_income/${id}`,
+        `/api/delete_income/${id}`,
         options
       );
       if (response.status == 200) {

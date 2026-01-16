@@ -9,7 +9,7 @@ const CategoryByYear = () => {
   }, []);
 
   const fetchCatByYear = async () => {
-    const response = await fetch("http://127.0.0.1:5000/category_by_year");
+    const response = await fetch("/api/category_by_year");
     const data = await response.json();
     setCatByYear(data.data);
   };

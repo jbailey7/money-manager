@@ -124,7 +124,7 @@ export const TransactionProvider = ({ children }) => {
 
   const fetchFilterIncomes = async () => {
     const response = await fetch(
-      `http://127.0.0.1:5000/incomes/${filterYear}/${month}/${minPrice}/${maxPrice}`
+      `/api/incomes/${filterYear}/${month}/${minPrice}/${maxPrice}`
     );
     const data = await response.json();
     setFilterIncomes(data.res);
@@ -134,7 +134,7 @@ export const TransactionProvider = ({ children }) => {
   };
 
   const fetchMonths = async () => {
-    const response = await fetch(`http://127.0.0.1:5000/months/${currentYear}`);
+    const response = await fetch(`/api/months/${currentYear}`);
     const data = await response.json();
     setMonths(data.months);
   };
@@ -172,7 +172,7 @@ export const TransactionProvider = ({ children }) => {
       filterCategories.push("Other");
     }
     const response = await fetch(
-      `http://127.0.0.1:5000/spendings/${filterYear}/${month}/${filterCategories.join()}/${necessary}/${minPrice}/${maxPrice}`
+      `/api/spendings/${filterYear}/${month}/${filterCategories.join()}/${necessary}/${minPrice}/${maxPrice}`
     );
     const data = await response.json();
     setFilterSpendings(data.res);
@@ -183,14 +183,14 @@ export const TransactionProvider = ({ children }) => {
 
   const fetchYear = async () => {
     const response = await fetch(
-      `http://127.0.0.1:5000/yearly_total/${currentYear}`
+      `/api/yearly_total/${currentYear}`
     );
     const data = await response.json();
     setYear(data.year);
   };
 
   const fetchYears = async () => {
-    const response = await fetch("http://127.0.0.1:5000/years");
+    const response = await fetch("/api/years");
     const data = await response.json();
     setYears(data.years);
   };

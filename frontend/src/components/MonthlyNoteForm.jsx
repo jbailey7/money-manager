@@ -11,7 +11,7 @@ const MonthlyNoteForm = ({ existingMonth, updateCallback }) => {
       note,
     };
 
-    const url = `http://127.0.0.1:5000/update_month_note/${existingMonth.id}`;
+    const url = `/api/update_month_note/${existingMonth.id}`;
     const options = {
       method: "PATCH",
       headers: {

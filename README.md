@@ -106,3 +106,44 @@ This reset mechanism ensures that aggregate totals remain consistent and can be 
 
 
 # Usage
+This application is fully containerized using Docker and Docker Compose. No local installation of Python, Node.js, or frontend/backend dependencies is required.
+
+### Prerequisites
+Docker <br/>
+Docker Compose<br/>
+
+### Running the Application
+Make sure to have Docker Desktop running. Then, from the root of the repository, build and start the application:
+
+`docker compose up --build`
+
+This command will:
+
+* Build and start the Flask backend
+
+* Build and start the React frontend
+
+* Install all required Python and JavaScript dependencies automatically
+
+* Configure networking between the frontend and backend containers
+
+
+### Accessing the Application
+
+Frontend (React): http://localhost:5173
+
+Backend (Flask API): Accessible internally via Docker networking and proxied through the frontend
+
+### Stopping the Application 
+
+To stop all running containers:
+
+`docker compose down`
+
+### API Requests During Development
+
+The frontend communicates with the backend through a Vite development proxy. All API requests from the frontend should be made to paths prefixed with /api, for example:
+
+`fetch('/api/yearly_total/2025')`
+
+These requests are automatically forwarded to the Flask backend, avoiding hard-coded URLs and port conflicts.

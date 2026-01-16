@@ -18,7 +18,7 @@ const CategoryByMonth = () => {
 
   const fetchCatByMonth = async () => {
     const response = await fetch(
-      `http://127.0.0.1:5000/category_by_month/${currentYear}`
+      `/api/category_by_month/${currentYear}`
     );
     const data = await response.json();
     setCatByMonth(data.data);
